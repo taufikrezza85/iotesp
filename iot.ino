@@ -1,4 +1,4 @@
-//change pin LDR1
+//change pin LDR for light sensor
 
 #include <MakerKit.h>
 
