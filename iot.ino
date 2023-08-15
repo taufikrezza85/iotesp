@@ -46,6 +46,13 @@ char auth[] = BLYNK_AUTH_TOKEN;
 
 char ssid[] = "HUAWEI-B315-7C2A";
 char pass[] = "18DMA9MTRQL";
+
+
+int value1;
+int value2;
+int value3;
+
+
 BLYNK_WRITE(V1)
 {
 int pinValue = param.asInt();
