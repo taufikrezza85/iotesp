@@ -1,3 +1,5 @@
+//change pin LDR1
+
 #include <MakerKit.h>
 
 #include <Adafruit_NeoPixel.h>
@@ -71,7 +73,7 @@ BlynkTimer Timer1;
 void Timer1_TimerEvent()
 {
   Blynk.virtualWrite(V20, ultrasonic(12,27));
-  Blynk.virtualWrite(V21, analogRead(39));
+  Blynk.virtualWrite(V21, analogRead(36));
 }
 
 
@@ -80,7 +82,7 @@ void setup() {
 
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
-  pinMode(39, INPUT);
+  pinMode(36, INPUT);
   Timer1.setInterval(300, Timer1_TimerEvent);
 
 }
