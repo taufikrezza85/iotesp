@@ -1,4 +1,6 @@
 //change pin LDR for light sensor
+//library: MakerKit, Adafruit_NeoPixel
+
 
 #include <MakerKit.h>
 
