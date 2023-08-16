@@ -24,9 +24,11 @@ jobs:
               source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
           sketch-paths: |
             - iot.ino
-            - blynk/blynk.ino
+            
           libraries: |
             - name: ESP32Servo
-            
+            - name: Blynk
+              version: 1.2.0
+            - name : "Adafruit NeoPixel"
           cli-compile-flags: |
             - --warnings="none"
