@@ -1,13 +1,8 @@
-#include <Adafruit_NeoPixel.h>
-
-Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);
-
 //declare buzer pin
 const int buzer=2;
 
 void setup() {
-  pixels.begin();
-
+  
   Serial.begin(9600);
   
   //CODING BY MOHAMAD NOH
