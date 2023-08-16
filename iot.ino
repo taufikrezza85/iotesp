@@ -51,6 +51,8 @@ char pass[] = "18DMA9MTRQL";
 int value1;
 int value2;
 int value3;
+//declare buzer pin
+const int buzer=2;
 
 
 BLYNK_WRITE(V1)
@@ -102,7 +104,9 @@ void Timer1_TimerEvent()
     pixels.setPixelColor(4, 0xffffff);
     pixels.show();
     pixels.show();
- //======================================
+ //====================================== 
+ 
+ digitalWrite(buzer,HIGH); // active buzer
 }
 
 
@@ -112,6 +116,7 @@ void setup() {
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
   pinMode(36, INPUT);
+  pinMode(buzer,OUTPUT); //set pinMode for buzer
   Timer1.setInterval(300, Timer1_TimerEvent);
 
 }
