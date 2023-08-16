@@ -81,8 +81,18 @@ BlynkTimer Timer1;
 
 void Timer1_TimerEvent()
 {
+	
+  int ultra = ultrasonic(12,27);
+  int light1 = analogRead(36);
+	
   Blynk.virtualWrite(V20, ultrasonic(12,27));
   Blynk.virtualWrite(V21, analogRead(36));
+  
+  //added display value ultrasonic & light sensor
+  Serial.print("ultrasonic:");
+  Serial.print(ultra);
+  Serial.print("light:");
+  Serial.println(light);
 }
 
 
