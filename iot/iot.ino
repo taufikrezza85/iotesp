@@ -11,5 +11,10 @@ void loop(){
   Serial.print ("Value:");
   Serial.println(value1);
   
-  
+  if(value1>512){
+    digitalWrite(22,HIGH);
+  }
+  else{
+    digitalWrite(22,LOW);
+  }
 }
