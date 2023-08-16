@@ -86,6 +86,8 @@ void Timer1_TimerEvent()
 	
   int ultra = ultrasonic(12,27);
   int light1 = analogRead(36);
+  //CODING ADD BY MOHAMAD NOH
+  int analogpin34 = analogRead(34);
 	
   Blynk.virtualWrite(V20, ultrasonic(12,27));
   Blynk.virtualWrite(V21, analogRead(36));
@@ -115,6 +117,8 @@ void setup() {
 
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
+  //CODING BY MOHAMAD NOH
+  pinMode(34, INPUT);
   pinMode(36, INPUT);
   pinMode(buzer,OUTPUT); //set pinMode for buzer
   Timer1.setInterval(300, Timer1_TimerEvent);
