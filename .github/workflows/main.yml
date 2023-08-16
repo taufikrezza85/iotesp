@@ -27,8 +27,6 @@ jobs:
             - blynk/blynk.ino
           libraries: |
             - name: ESP32Servo
-            - name: Blynk
-              version: 1.2.0
-            - name : "Adafruit NeoPixel"
+            
           cli-compile-flags: |
             - --warnings="none"
