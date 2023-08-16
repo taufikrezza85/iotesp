@@ -93,6 +93,16 @@ void Timer1_TimerEvent()
   Serial.print(ultra);
   Serial.print("light:");
   Serial.println(light);
+  
+  //added light pixels ===============
+	pixels.setPixelColor(0, 0xffffff);
+    pixels.setPixelColor(1, 0xffffff);
+    pixels.setPixelColor(2, 0xffffff);
+    pixels.setPixelColor(3, 0xffffff);
+    pixels.setPixelColor(4, 0xffffff);
+    pixels.show();
+    pixels.show();
+ //======================================
 }
 
 
